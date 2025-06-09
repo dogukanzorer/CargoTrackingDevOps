@@ -27,8 +27,7 @@ app.MapScalarApiReference();
 app.AddMiddlewares();
 
 app.MapControllers()
-   .RequireRateLimiting("fixed"); 
-  // .RequireAuthorization();
+   .RequireRateLimiting("fixed").RequireAuthorization();
 
 app.RegisterRoutes();
 

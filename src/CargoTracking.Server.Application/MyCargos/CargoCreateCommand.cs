@@ -43,6 +43,8 @@ namespace CargoTracking.Server.Application.MyCargos;
             CargoTypeEnum.FromValue(request.CargoInformation.CargoTypeValue), request.CargoInformation.weight);
         cargo.CargoInformation = cargoInformation;
         cargo.cargoStatus = Cargo.CargoStatusEnum.pending;
+        cargo.Recipient = request.Recipient;
+        cargo.Sender = request.Sender;  
         cargoRepository.Add(cargo);
         await unitOfWork.SaveChangesAsync(cancellationToken);
         return "Cargo created successfully!"; // You might want to return the ID or some other identifier of the created cargo.
