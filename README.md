@@ -32,7 +32,6 @@ The initial implementation focuses on a **Cargo Tracking System**, serving as a 
 | **Scrutor** | Dependency injection |
 
 ---
-![image_alt](https://github.com/dogukanzorer/CargoTrackingDevOps/blob/4938abbb4028e7de9b2154eb80449e7ce7492c23/num1.png)
 <img src="https://github.com/dogukanzorer/CargoTrackingDevOps/raw/4938abbb4028e7de9b2154eb80449e7ce7492c23/num1.png" alt="Cargo Tracking Giriş" width="300" height="550">
 ## 🔧 Implementation Progress
 
