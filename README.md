@@ -32,7 +32,7 @@ The initial implementation focuses on a **Cargo Tracking System**, serving as a 
 | **Scrutor** | Dependency injection |
 
 ---
-https://github.com/user-attachments/assets/a02a87e1-cc61-4c92-8572-2d8bdf6a2839
+![image_alt](https://github.com/dogukanzorer/CargoTrackingDevOps/blob/4938abbb4028e7de9b2154eb80449e7ce7492c23/num1.png)
 ## 🔧 Implementation Progress
 
 ### ✅ Step 1: Cargo Tracking Module
