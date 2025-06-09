@@ -1,11 +1,27 @@
-# 🧱 2025 Clean Architecture Setup – Cargo Tracking System
+# 🧱 Clean Architecture - Cargo Tracking System (2025)
 
-This repository provides a **modern**, **modular**, and **extensible Clean Architecture setup** tailored for 2025 enterprise projects.  
-The initial implementation focuses on a **Cargo Tracking System**, serving as a scalable template for future modules.
+A modern **Clean Architecture** starter project for building modular, maintainable, and scalable enterprise applications using **.NET 8**. This project implements a **Cargo Tracking System** as a sample module and is built to be extended with additional bounded contexts like Authentication, User Management, and more.
+
+Clean Architecture is also known as:
+- Hexagonal Architecture
+- Ports-and-Adapters
+- Onion Architecture
 
 ---
 
-## 🧱 Architectural Overview
+## 📋 Table of Contents
+
+- [Give a Star ⭐](#give-a-star-)
+- [Versions](#versions)
+- [Getting Started](#getting-started)
+- [Architecture Overview](#architecture-overview)
+- [Project Structure](#project-structure)
+- [Libraries Used](#libraries-used)
+- [Future Modules](#future-modules)
+
+---
+
+## ⭐ Give a Star ⭐
 
 ### 🧭 Architecture Pattern
 - **Clean Architecture**
