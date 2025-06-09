@@ -1,40 +1,73 @@
-# 2025 Yılı Clean Architecture Setup
+# 🧱 2025 Clean Architecture Setup – Cargo Tracking System
 
-Bu repoda, 2025 yılı için projelerimizde başlangıç olarak kullanabileceğiniz modern ve modüler bir Clean Architecture yapısı sunulmaktadır.
+This repository provides a **modern**, **modular**, and **extensible Clean Architecture setup** tailored for 2025 enterprise projects.  
+The initial implementation focuses on a **Cargo Tracking System**, serving as a scalable template for future modules.
 
-## Video Linki:
-1. https://youtube.com/live/byiN2UZXXJQ
-2. https://youtube.com/live/kFiBEheyNOw
+---
 
-## Proje İçeriği
+## 🧱 Architectural Overview
 
-### Mimari Yapı
-- **Architectural Pattern**: Clean Architecture
-- **Design Patterns**:
-  - Result Pattern
-  - Repository Pattern
-  - CQRS Pattern
-  - UnitOfWork Pattern
+### 🧭 Architecture Pattern
+- **Clean Architecture**
 
-### Kullanılan Kütüphaneler
-- **MediatR**: CQRS ve mesajlaşma işlemleri için.
-- **TS.Result**: Standart sonuç modellemeleri için.
-- **Mapster**: Nesne eşlemeleri için.
-- **FluentValidation**: Doğrulama işlemleri için.
-- **TS.EntityFrameworkCore.GenericRepository**: Genel amaçlı repository işlemleri için.
-- **EntityFrameworkCore**: ORM (Object-Relational Mapping) için.
-- **OData**: Sorgulama ve veri erişiminde esneklik sağlamak için.
-- **Scrutor**: Dependency Injection yönetimi ve dinamik servis kaydı için.
-- **Microsoft.AspNetCore.Authentication.JwtBearer**: Authentication yönetimi için
-- **Keycloak.AuthServices.Authentication**: Keyloak ile Authentication yönetimi için
+### 🎯 Design Patterns
+- Result Pattern  
+- Repository Pattern  
+- CQRS Pattern  
+- Unit of Work Pattern  
 
-## Kurulum ve Kullanım
-1. **Depoyu Klonlayın**:
-   ```bash
-   git clone https://github.com/tanersaydam/2025-clean-architecture-setup.git
-   cd 2025-clean-architecture-setup
+---
 
-2. **Keycloak Docker Kodu**:
-   ```bash
-    docker run -d --name keycloak -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:25.0.2 start-dev
-   ```
+## 🧰 Libraries & Technologies
+
+| Library / Tool | Purpose |
+|----------------|---------|
+| **.NET 8** | Framework |
+| **MediatR** | CQRS and messaging |
+| **TS.Result** | Result modeling |
+| **Mapster** | Object mapping |
+| **FluentValidation** | Validation logic |
+| **EntityFrameworkCore** | ORM |
+| **OData** | Query flexibility |
+| **Scrutor** | Dependency injection |
+
+---
+
+## 🔧 Implementation Progress
+
+### ✅ Step 1: Cargo Tracking Module
+
+#### 📦 Domain Layer
+- **Entities & Value Objects**:
+  - `Cargo` (Main entity)
+  - `Address` (Value object)
+  - `Person` (Value object)
+  - `CargoTypeEnum` (Enum)
+- **Abstractions**:
+  - `ICargoRepository`
+- **DTOs**:
+  - `ErrorResponseDto`
+  - `BadRequestErrorResponseDto`
+
+#### ⚙️ Application Layer (CQRS)
+- **Commands & Queries**:
+  - `CargoCreateCommand`
+  - `CargoGetAllQuery`
+- **Validation**: `FluentValidation`
+- **Mapping**: `Mapster`
+
+#### 🛠️ Infrastructure Layer
+- **Repository**: `CargoRepository`
+- **EF Core**:
+  - `CargoConfiguration` (Entity mapping)
+- **DI**: `Scrutor` for service registration
+
+#### 🌐 WebAPI Layer
+- **OData Endpoints**:
+  - `GET /odata/cargos` (List all)
+  - `POST /odata/cargos` (Create)
+- **API Versioning**: Configured
+
+---
+
+> ✅ **Upcoming**: Cargo detail/update/delete, authentication, Swagger integration.

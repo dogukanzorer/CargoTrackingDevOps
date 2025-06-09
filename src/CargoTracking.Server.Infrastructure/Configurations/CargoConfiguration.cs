@@ -26,7 +26,7 @@ namespace CargoTracking.Server.Infrastructure.Configurations
                 builder.Property(p => p.cargoType).HasConversion(type => type.Value, value => CargoTypeEnum.FromValue(value));
             });
 
-            builder.Property(p => p.cargoStatusEnum)
+            builder.Property(p => p.cargoStatus)
                 .HasConversion(status => status.Value, value => Cargo.CargoStatusEnum.FromValue(value));
             
 

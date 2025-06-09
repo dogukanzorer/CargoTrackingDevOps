@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using CargoTracking.Server.Application.MyCargos;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
@@ -11,22 +12,22 @@ namespace CargoTracking.Server.WebAPI.Controllers;
 [ApiController]
 [EnableQuery]
 public class AppODataController(
-    //ISender sender
+    ISender sender
     ) : ODataController
 {
     public static IEdmModel GetEdmModel()
     {
         ODataConventionModelBuilder builder = new();
         builder.EnableLowerCamelCase();
-        //builder.EntitySet<EmployeeGetAllQueryResponse>("employees");
+        builder.EntitySet<CargoGetAllQueryResponse>("myCargos");
         return builder.GetEdmModel();
     }
 
-    /* [HttpGet("employees")]
-    public async Task<IQueryable<EmployeeGetAllQueryResponse>> GetAllEmployees(CancellationToken cancellationToken)
+     [HttpGet("myCargos")]
+    public async Task<IQueryable<CargoGetAllQueryResponse>> GetAllEmployees(CancellationToken cancellationToken)
     {
-        var response = await sender.Send(new EmployeeGetAllQuery(), cancellationToken);
+        var response = await sender.Send(new CargoGetAllQuery(), cancellationToken);
         return response;
     }
-    */
+    
 }
